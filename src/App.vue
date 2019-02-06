@@ -1,24 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <mostrar-datos-componente></mostrar-datos-componente>
+    <modificar-datos-componente></modificar-datos-componente>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import store from "./vuex/store.js";
+import MostrarDatosComponente from "./components/MostrarDatosComponente.vue";
+import ModificarDatosComponente from "./components/ModificarDatosComponente.vue";
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+  name: "app",
+  components: { MostrarDatosComponente, ModificarDatosComponente },
+  store
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
